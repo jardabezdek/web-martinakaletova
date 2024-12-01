@@ -1,0 +1,284 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Martina Kaletová',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        // { text: 'Home', href: '#' },
+        { 
+          text: 'Kdo jsem', 
+          links: [
+            { text: 'O mně', href: getPermalink('/#about') },
+            { text: 'Více o mně', href: getPermalink('/more-about-me') },
+          ] 
+        },
+        { text: 'Má filozofie', href: getPermalink('/#philosophy') },
+        { 
+          text: 'Služby', 
+          links: [
+            { text: 'Služby', href: getPermalink('/#services') },
+            { text: 'Detailní popis', href: getPermalink('/services') },
+
+          ]
+        },
+        { text: 'Můj klient', href: getPermalink('/#client') },
+        { text: 'Kontakt', href: getPermalink('/#contact') },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero ******************* -->
+
+  <Hero
+    id="hero"
+    title="Služby"
+    tagline="Detailní popis"
+  >
+    <Fragment slot="subtitle">
+      V této sekci si můžete přečíst detailní popis jednotlivých služeb.
+    </Fragment>
+  </Hero>
+
+  <!-- Services -- Consultation **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        description: 'Probíhá v největší míře on-line, ale je možné domluvit se individuálně i na osobním setkání.',
+      },
+      {
+        description: 'Jednorázová služba zahrnující poradenství osobně nebo on-line v délce 40/70 minut na konkrétní téma, se kterým přijde klient, nebo zhodnocení a vhodná doporučení pro změnu životního stylu.',
+      },
+      {
+        description: 'Témata mohou být různá a nemusí být fixně daná – klient často přijde s konkrétním tématem, ale po otevření rozhovoru se změní, společně objevujeme, kde může být skutečný problém, často je jinde, než se klient domnívá.',
+      },
+      {
+        description: 'Nejčastěji v praxi řeším skladbu jídel, ale možná ještě častěji návyky s jídlem spojené, emoce a potřebu kontroly, dále jiné rutiny a návyky běžných denních činností, stres a stress managemeng, spánek a spánkovou hygienu, pohyb a vztah k němu, mezilidské vztahy a velkým tématem je vztah k sobě, ze kterého všechno vychází.',
+      },
+      {
+        description: 'Společně s klientem se snažíme přijít na to, co je nyní prioritou pro řešení a následnou změnu.',
+      },
+    ]}
+    image={{src: '~/assets/images/services-consultation.png', alt: 'Consultation', loading: 'eager'}}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Konzultace
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Services -- Habits **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        description: 'Klient ode mě dostane dotazník k vyplnění zahrnující otázky ohledně stravovacích návyků, vztahu k jídlu, historie stravování, ale i běžných denních aktivit, popř. problémy se zažíváním apod. Současně klient vyplní několikadenní zápis svého stravovacího režimu.',
+      },
+      {
+        description: 'Vyhodnocení proběhne na základě vyplněného dotazníku po zodpovězení doplňujících dotazů jako následná konzultace (45 min.), kde se zaměříme na hlavní chyby/nedostatky a předám vhodná doporučení, popř. návrhy řešení problémů.',
+      },
+      {
+        description: 'Pro klienta vytvořím ukázkový jídelníček (2-3 možnosti denních jídel) dle jeho preferencí chuťových preferencí i jeho energetických potřeb dle zvoleného cíle.',
+      },
+      {
+        description: 'klientovi jídelníček zašlu před konzultací tak, aby byl prostor vyjádřit se k případným nově vzniklým otázkám.',
+      },
+    ]}
+    image={{src: '~/assets/images/services-habits.png', alt: 'Habits', loading: 'eager'}}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Zhodnocení stravovacích návyků a jejich optimalizace
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Services -- Nutrition **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        description: 'Jednorázová služba pro ty, jejichž priorita není změna postavy, ale obecně lepší pocit po jídle, dostatečná a kvalitní výživa, navýšení energie a všechny další benefity plynoucí z individuálního nastavení stravy.',
+      },
+      {
+        description: 'Součástí je vstupní dotazník a konzultace (30 min.), po vypracování plánu následné doladění detailů a zodpovězení dotazů (e-mailem).',
+      },
+      {
+        description: 'Kromě stravovacího plánu klient obdrží edukační materiál nejen o výživě, ale i zahrnující individuální doporučení týkající se změn dosavadního životního stylu, suplementace, výběru potravin i konkrétní tipy.',
+      },
+    ]}
+    image={{src: '~/assets/images/services-nutrition.png', alt: 'Nutrition', loading: 'eager'}}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Nutriční plán na míru
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Services -- Coaching **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        description: 'Nejintenzivnější forma spolupráce, u které klient obecně dosahuje nejlepších výsledků.',
+      },
+      {
+        description: 'Výsledkem je stravovací plán dle preferencí klienta, jeho potřeb a cílů buď ve formě stravovacího plánu flexibilního (varianty snídaní, obědů, večeří, případně svačin, ze kterých si klient vybírá a skládá si jídla během dne) nebo fixního (kde budou jednotlivá jídla přesně rozplánována na všechny dny v měsíci).',
+      },
+      {
+        description: 'Součástí je vstupní konzultace (30 min.) a vyplnění dotazníku a doplňujících materiálů pro získání co největšího množství informací tak, abychom mohli plán co nejvíce individualizovat – dle chutí, potřeb, přání, cílů...',
+      },
+      {
+        description: 'Následuje vypracování plánu (1 měsíc=4 týdny) a jeho předání, vyjasnění detailů (e-mailem).',
+      },
+      {
+        description: 'Během spolupráce probíhá konzultace/zpětná vazba prostřednictvím e-mailu a vyplněním reportu (sebereflexe, sledování procesu a dosažených výsledků, případně potřebné úpravy plánu, ohodnocení spolupráce) buď 1x týdně nebo 1x za 14 dní.',
+      },
+      {
+        description: 'Součástí je i edukační materiál i individuální suplementační plán včetně doporučení vhodných potravin či potravinových doplňků.',
+      },
+      {
+        description: 'Kromě stravy budeme intenzivně řešit i vhodná nastavení denních návyků tak, aby jejich nastavení co nejvíce podpořilo klientův cíl.',
+      },
+    ]}
+    image={{src: '~/assets/images/services-coaching.png', alt: 'Coaching', loading: 'eager'}}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Nutriční a návykový coaching
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Services -- Suplements **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        description: 'Jednorázová služba on-line pro klienty, kteří tápou v oblasti doplňků stravy či výběru jejich kvality.',
+      },
+      {
+        description: 'Zhodnocení dosavadní suplementace a její optimalizace na základě cíle klienta – přidání vhodných nebo naopak vyloučení zbytečných doplňků, doporučení zařazení doplňků během dne a s ohledem na jídlo, individuální dávkovací schéma.',
+      },
+      {
+        description: 'Vyvrácení nejčastějších mýtů, (ne)vhodnost kombinace doplňků, zodpovězení konkrétních dotazů klienta.',
+      },
+      {
+        description: 'Služba zahrnuje dotazník pro klienta, jeho vyhodnocení a zpracování doporučení a následná konzultace (45 min.), kde bude prostor pro konkrétní dotazy a případné objasnění doporučených informací.',
+      },
+    ]}
+    image={{src: '~/assets/images/services-suplements.png', alt: 'Suplements', loading: 'eager'}}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+          Suplementační podpůrná strategie
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Services -- No Plan Coaching **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        description: 'Vhodné pro klienty, kteří už jsou si jisti v sestavování jídel a velmi dobře zvládají orientaci v makroživinách a potravinách obecně.',
+      },
+      {
+        description: 'Vhodné jako navazující forma spolupráce pro klienty po absolvování alespoň 3 měsíců základního coachingu pod mým vedením.',
+      },
+      {
+        description: 'Vhodné pro dosahování konkrétních cílů nebo pro udržení konzistence v pokračování Vaší cesty, kdy cítíte, že Vám vyhovuje podpora průvodce.',
+      },
+      {
+        description: 'Součástí jsou doporučení pro denní příjem energie, rozložení makroživin v rámci denního přijmu energie i v rámci jednotlivých denních jídel dle potřeb a cílů klienta; doporučení suplementace, pokud je třeba.',
+      },
+      {
+        description: 'Během spolupráce probíhá konzultace/zpětná vazba prostřednictvím e-mailu a vyplněním reportu (sebereflexe, sledování procesu a dosažených výsledků, případně potřebné úpravy plánu, ohodnocení spolupráce) buď 1x týdně nebo 1x za 14 dní.',
+      },
+    ]}
+    image={{src: '~/assets/images/services-no-plan-coaching.png', alt: 'No Plan Coaching', loading: 'eager'}}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+          Koučink bez stravovacího plánu
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Contact *********** -->
+
+  <Features2
+    id="contact"
+    title="Kontaktujte mě!"
+    items={[
+      {
+        title: 'Email',
+        description: '<a href="mailto:martinakaletova.cz@gmail.com">martinakaletova.cz@gmail.com</a>',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Instagram',
+        description: '<a href="https://www.instagram.com/martinakaletova_cz/">@martinakaletova_cz</a>',
+        icon: 'tabler:brand-instagram',
+      },
+      {
+        title: 'IČO',
+        description: '<a href="https://www.rzp.cz/verejne-udaje/cs/udaje/vyber-subjektu;nazev=martina%20kaletov%C3%A1;roleSubjektu=P/subjekt;ssarzp=A23ade01c39f7e21fe83b04f6e555c4ced8be92cc8c9d7e53cf73db9e07e748a41940">21833575</a>',
+        icon: 'tabler:receipt',
+      },
+    ]}
+  />
+
+</Layout>
