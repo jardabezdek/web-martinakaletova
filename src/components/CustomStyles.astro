@@ -25,19 +25,20 @@ import '@fontsource-variable/inter';
     --aw-font-serif: 'Inter Variable';
     --aw-font-heading: 'Inter Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* Adjusted Colors */
+    --aw-color-primary: rgb(53, 40, 29); /* A warmer tone inspired by the client's color */
+    --aw-color-secondary: rgb(78, 128, 152); /* A complement to the primary, still warm */
+    --aw-color-accent: rgb(255, 244, 228); /* Client's suggested color used as the accent */
 
-    --aw-color-text-heading: rgb(0 0 0);
-    --aw-color-text-default: rgb(16 16 16);
-    --aw-color-text-muted: rgb(16 16 16 / 66%);
-    --aw-color-bg-page: rgb(255 255 255);
+    --aw-color-text-heading: rgb(40, 40, 40); /* Slightly softer black for text */
+    --aw-color-text-default: rgb(50, 50, 50); /* Neutral dark gray for text */
+    --aw-color-text-muted: rgb(50, 50, 50 / 66%); /* Muted text adjusted for warmth */
+    --aw-color-bg-page: rgb(255, 244, 228); /* Client's suggested color for page background */
 
-    --aw-color-bg-page-dark: rgb(3 6 32);
+    --aw-color-bg-page-dark: rgb(102, 81, 51); /* Darker warm tone for dark mode */
 
     ::selection {
-      background-color: lavender;
+      background-color: rgb(255, 198, 102); /* Highlight matching the secondary color */
     }
   }
 
@@ -46,18 +47,19 @@ import '@fontsource-variable/inter';
     --aw-font-serif: 'Inter Variable';
     --aw-font-heading: 'Inter Variable';
 
-    --aw-color-primary: rgb(1 97 239);
-    --aw-color-secondary: rgb(1 84 207);
-    --aw-color-accent: rgb(109 40 217);
+    /* Updated Dark Mode Colors */
+    --aw-color-primary: rgb(194, 144, 77); /* A darker variation of the light mode primary */
+    --aw-color-secondary: rgb(179, 134, 71); /* A muted, darker warm tone */
+    --aw-color-accent: rgb(204, 170, 139); /* A subtle, soft accent color */
 
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(3 6 32);
+    --aw-color-text-heading: rgb(240, 230, 210); /* Warm beige for headings */
+    --aw-color-text-default: rgb(225, 215, 200); /* Softer light text for dark mode */
+    --aw-color-text-muted: rgb(225, 215, 200 / 66%); /* Muted text for dark mode */
+    --aw-color-bg-page: rgb(51, 41, 31); /* A dark, warm background tone */
 
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: rgb(194, 144, 77); /* Highlight matching the primary color */
+      color: rgb(51, 41, 31); /* Contrast text for selection */
     }
   }
 </style>
