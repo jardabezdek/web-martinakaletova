@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import { getPermalink } from '~/utils/permalinks';
@@ -109,7 +110,7 @@ const metadata = {
   
   <!-- Philosophy ****************** -->
 
-  <Steps2
+  <!-- <Steps2
     id="philosophy"
     title="Filozofie mé práce"
     subtitle="3 základní pilíře"
@@ -125,6 +126,35 @@ const metadata = {
       {
         title: 'Zodpovědnost a aktivní přístup',
         description: 'Zaměřuji se na klienty, kteří jsou ochotni převzít zodpovědnost za své zdraví a uvědomují si, že dlouhodobá změna vyžaduje aktivní přístup a práci na sobě. Společně se zaměříme na trvalé změny, které vedou ke zlepšení kvality života.',
+      },
+    ]}
+  /> -->
+
+  <Features
+    id="philosophy"
+    title="Filozofie mé práce"
+    subtitle="4 základní pilíře"
+    columns={2}
+    items={[
+      {
+        title: 'Komplexní přístup ke zdraví',
+        description: 'Věřím, že skutečné zdraví je výsledkem propojení vyvážené stravy, správně nastavené mysli a životních návyků. Nabízím holistický pohled, který zahrnuje všechny aspekty Vašeho skutečně zdravého životního stylu.',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: 'Odbornost a edukace',
+        description: 'Zakládám si na odbornosti a neustálém vzdělávání. Vysvětlím Vám vše srozumitelně a na základě ověřených informací, abyste mohli dělat rozhodnutí, která Vám budou dávat smysl. Naučím Vás, jak si vytvořit zdravé návyky, které budou fungovat dlouhodobě.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Empatie a individuální podpora',
+        description: 'Každý člověk je jedinečný, a proto se ke každému klientovi stavím s maximální empatií, porozuměním a pokorou. Mou prioritou je poskytnout Vám individuální podporu, která respektuje Vaše potřeby, životní situaci a cíle, a pomůže Vám nalézt cestu k harmonii těla i mysli.',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Zodpovědnost a aktivní přístup',
+        description: 'Zaměřuji se na klienty, kteří jsou ochotni převzít zodpovědnost za své zdraví a uvědomují si, že dlouhodobá změna vyžaduje aktivní přístup a práci na sobě. Společně se zaměříme na trvalé změny, které vedou ke zlepšení kvality života.',
+        icon: 'tabler:flame',
       },
     ]}
   />
@@ -143,22 +173,22 @@ const metadata = {
       {
         title: 'Nutriční plán na míru',
         description: 'Jednorázová služba zaměřena na optimální vyživení těla, zvýšení energie a také edukaci, jak by měl vypadat zdravý talíř.',
-          icon: 'tabler:list-letters',
+          icon: 'tabler:battery-charging',
       },
       {
         title: 'Nutriční a návykový koučink',
         description: 'Intenzivní spolupráce pro dosažení nejlepších výsledků a naplnění Vašich cílů. Konstantní podpora a a reakce na změny v průběhu spolupráce jsou samozřejmostí.',
-        icon: 'tabler:heart',
+        icon: 'tabler:heart-handshake',
       },
       {
         title: 'Koučink bez stravovacího plánu',
         description: 'Už víte, jak má zdravý talíř vypadat, přesto se Vám nedaří dosáhnout Vašich cílů? V rámci koučinku Vám pomůžu s udržením motivace a konzistence a s odstraňováním překážek, které Vás na Vaší cestě brzdí.',
-        icon: 'tabler:speakerphone',
+        icon: 'tabler:stairs-up',
       },
       {
         title: 'Zhodnocení stravovacích návyků a jejich optimalizace',
         description: 'Analýza současných stravovacích návyků a individuální doporučení pro jejich úpravu tak, abyste se po každém jídle cítili skvěle.',
-        icon: 'tabler:presentation',
+        icon: 'tabler:tools-kitchen-3',
       },
       {
         title: 'Suplementační podpůrná strategie',
