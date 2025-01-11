@@ -22,7 +22,7 @@ const metadata = {
           text: 'Kdo jsem', 
           links: [
             { text: 'O mně', href: getPermalink('/#about') },
-            { text: 'Více o mně', href: getPermalink('/more-about-me') },
+            { text: 'Má cesta', href: getPermalink('/my-journey') },
           ] 
         },
         { text: 'Má filozofie', href: getPermalink('/#philosophy') },
@@ -47,7 +47,7 @@ const metadata = {
   <Hero
     id="hero"
     title="Kdo jsem"
-    tagline="Více o mně"
+    tagline="Má cesta"
   >
     <Fragment slot="subtitle">
       Jsem doktorka farmacie s více než sedmiletou praxí v lékárnách a nutriční poradkyně. 
@@ -70,7 +70,7 @@ const metadata = {
   <Content
     title="Má cesta"
     subtitle="O mé cestě za průvodcovstvím a rovnováhou"
-    image={{src: '~/assets/images/about-me.jpg', alt: 'About', loading: 'eager'}}
+    image={{src: '~/assets/images/my-journey-1.jpg', alt: 'About', loading: 'eager'}}
   >
     <Fragment slot="content">
       <h4 class="text-1xl font-bold tracking-tight dark:text-white sm:text-1xl mb-1">
@@ -108,7 +108,7 @@ const metadata = {
   <!-- My journey - part 2 **************** -->
 
   <Content
-  image={{src: '~/assets/images/about-me.jpg', alt: 'About', loading: 'eager'}}
+  image={{src: '~/assets/images/my-journey-2.jpg', alt: 'About', loading: 'eager'}}
   isReversed
 >
   <Fragment slot="content">
@@ -144,7 +144,7 @@ const metadata = {
   <!-- My journey - part 3 **************** -->
 
   <Content
-  image={{src: '~/assets/images/about-me.jpg', alt: 'About', loading: 'eager'}}
+  image={{src: '~/assets/images/my-journey-3.jpg', alt: 'About', loading: 'eager'}}
   >
   <Fragment slot="content">
     <h4 class="text-1xl font-bold tracking-tight dark:text-white sm:text-1xl mb-1">
