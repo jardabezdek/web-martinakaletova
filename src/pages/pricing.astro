@@ -1,0 +1,214 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Header from '~/components/widgets/Header.astro';
+import { getPermalink } from '~/utils/permalinks';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Martina Kaletová',
+};
+---
+
+<Layout metadata={metadata}>
+    <Fragment slot="announcement"></Fragment>
+    <Fragment slot="header">
+      <Header
+        links={[
+          // { text: 'Home', href: '#' },
+          { 
+            text: 'Kdo jsem', 
+            links: [
+              { text: 'O mně', href: getPermalink('/#about') },
+              { text: 'Má cesta', href: getPermalink('/my-journey') },
+            ] 
+          },
+          { text: 'Má filozofie', href: getPermalink('/#philosophy') },
+          { 
+            text: 'Služby', 
+            links: [
+              { text: 'Služby', href: getPermalink('/#services') },
+              { text: 'Detailní popis', href: getPermalink('/services') },
+              { text: 'Ceník', href: getPermalink('/pricing') },
+            ]
+          },
+          { text: 'Můj klient', href: getPermalink('/#client') },
+          { text: 'Kontakt', href: getPermalink('/#contact') },
+        ]}
+        isSticky
+        showToggleTheme
+      />
+    </Fragment>
+
+  <!-- HeroText Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Služby"
+    tagline="Ceník"
+  >
+    <Fragment slot="subtitle">
+      V této sekci se&nbsp;dozvíte vše, co vás o jednotlivých službách zajímá
+    </Fragment>
+  </Hero>
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Ceník služeb"
+    prices={[
+      {
+        title: 'Konzultace',
+        // subtitle: 'Jednorázová konzultace zaměřená na konkrétní téma nebo problémy a doporučení ke změně.',
+        price: 790,
+        period: 'za 40 minut',
+        items: [
+          {
+            description: 'Jednorázová konzultace',
+          },
+          {
+            description: 'Online nebo osobně dle domluvy',
+          },
+        ],
+        // callToAction: {
+        //   target: '_blank',
+        //   text: 'Objednat se',
+        //   href: getPermalink('#contact'),
+        // },
+      },
+      {
+        title: 'Nutriční koučink',
+        price: 5999,
+        period: 'za měsíc',
+        items: [
+          {
+            description: 'Konzultace 1x týdně',
+          },
+          {
+            description: 'Individuální plán stravy a návyků',
+          },
+          {
+            description: 'Pravidelná zpětná vazba',
+          },
+          {
+            description: 'Úprava dle potřeb klienta',
+          },
+        ],
+        // callToAction: {
+        //   target: '_blank',
+        //   text: 'Objednat se',
+        //   href: getPermalink('#contact'),
+        // },
+      },
+      {
+        title: 'Nutriční plán na míru',
+        price: 4490,
+        period: 'od',
+        items: [
+          {
+            description: 'Konzultace',
+          },
+          {
+            description: 'Individuální flexibilní plán',
+          },
+          {
+            description: 'Edukační materiály',
+          },
+          {
+            description: 'E-mailová podpora',
+          },
+        ],
+        // callToAction: {
+        //   target: '_blank',
+        //   text: 'Objednat se',
+        //   href: getPermalink('#contact'),
+        // },
+      },
+      {
+        title: 'Zhodnocení návyků',
+        price: 1590,
+        period: 'jednorázově',
+        items: [
+          {
+            description: 'Konzultace',
+          },
+          {
+            description: 'Analýza stravovacích návyků',
+          },
+          {
+            description: 'Zhodnocení jídelníčku',
+          },
+          {
+            description: 'Doporučení ke změně',
+          }
+        ],
+        // callToAction: {
+        //   target: '_blank',
+        //   text: 'Objednat se',
+        //   href: getPermalink('#contact'),
+        // },
+      },
+      {
+        title: 'Suplementy',
+        price: 1590,
+        period: 'jednorázově',
+        items: [
+          {
+            description: 'Analýza stávající suplementace',
+          },          
+          {
+            description: 'Návrh vhodných doplňků',
+          },
+          {
+            description: 'Konzultace dávkování',
+          },
+        ],
+        // callToAction: {
+        //   target: '_blank',
+        //   text: 'Objednat se',
+        //   href: getPermalink('#contact'),
+        // },
+      },
+      {
+        title: 'Koučink na míru',
+        price: 3999,
+        period: 'za měsíc',
+        items: [
+          {
+            description: 'Konzultace 1x týdně',
+          },          
+          {
+            description: 'Individuální plán ke změně životního stylu',
+          },
+          {
+            description: 'Pravidelná zpětná vazba',
+          },
+          {
+            description: 'Úprava dle potřeb klienta',
+          },
+        ],
+        // callToAction: {
+        //   target: '_blank',
+        //   text: 'Objednat se',
+        //   href: getPermalink('#contact'),
+        // },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Jste připraveni na změnu?"
+    subtitle="Objednejte se na nezávaznou konzultaci už dnes!"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Objednat se',
+        href: getPermalink('/#contact'),
+      },
+    ]}
+  />
+
+</Layout>
