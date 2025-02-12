@@ -57,144 +57,117 @@ const metadata = {
 
   <Prices
     title="Ceník služeb"
-    prices={[
-      {
-        title: 'Konzultace',
-        // subtitle: 'Jednorázová konzultace zaměřená na konkrétní téma nebo problémy a doporučení ke změně.',
-        price: 790,
-        period: 'za 40 minut',
-        items: [
-          {
-            description: 'Jednorázová konzultace',
-          },
-          {
-            description: 'Online nebo osobně dle domluvy',
-          },
-        ],
-        // callToAction: {
-        //   target: '_blank',
-        //   text: 'Objednat se',
-        //   href: getPermalink('#contact'),
-        // },
-      },
-      {
-        title: 'Nutriční koučink',
-        price: 5999,
-        period: 'za měsíc',
-        items: [
-          {
-            description: 'Konzultace 1x týdně',
-          },
-          {
-            description: 'Individuální plán stravy a návyků',
-          },
-          {
-            description: 'Pravidelná zpětná vazba',
-          },
-          {
-            description: 'Úprava dle potřeb klienta',
-          },
-        ],
-        // callToAction: {
-        //   target: '_blank',
-        //   text: 'Objednat se',
-        //   href: getPermalink('#contact'),
-        // },
-      },
-      {
-        title: 'Nutriční plán na míru',
-        price: 4490,
-        period: 'od',
-        items: [
-          {
-            description: 'Konzultace',
-          },
-          {
-            description: 'Individuální flexibilní plán',
-          },
-          {
-            description: 'Edukační materiály',
-          },
-          {
-            description: 'E-mailová podpora',
-          },
-        ],
-        // callToAction: {
-        //   target: '_blank',
-        //   text: 'Objednat se',
-        //   href: getPermalink('#contact'),
-        // },
-      },
-      {
-        title: 'Zhodnocení návyků',
-        price: 1590,
-        period: 'jednorázově',
-        items: [
-          {
-            description: 'Konzultace',
-          },
-          {
-            description: 'Analýza stravovacích návyků',
-          },
-          {
-            description: 'Zhodnocení jídelníčku',
-          },
-          {
-            description: 'Doporučení ke změně',
-          }
-        ],
-        // callToAction: {
-        //   target: '_blank',
-        //   text: 'Objednat se',
-        //   href: getPermalink('#contact'),
-        // },
-      },
-      {
-        title: 'Suplementy',
-        price: 1590,
-        period: 'jednorázově',
-        items: [
-          {
-            description: 'Analýza stávající suplementace',
-          },          
-          {
-            description: 'Návrh vhodných doplňků',
-          },
-          {
-            description: 'Konzultace dávkování',
-          },
-        ],
-        // callToAction: {
-        //   target: '_blank',
-        //   text: 'Objednat se',
-        //   href: getPermalink('#contact'),
-        // },
-      },
-      {
-        title: 'Koučink na míru',
-        price: 3999,
-        period: 'za měsíc',
-        items: [
-          {
-            description: 'Konzultace 1x týdně',
-          },          
-          {
-            description: 'Individuální plán ke změně životního stylu',
-          },
-          {
-            description: 'Pravidelná zpětná vazba',
-          },
-          {
-            description: 'Úprava dle potřeb klienta',
-          },
-        ],
-        // callToAction: {
-        //   target: '_blank',
-        //   text: 'Objednat se',
-        //   href: getPermalink('#contact'),
-        // },
-      },
-    ]}
+    prices={
+      [
+        {
+          title: 'Úvodní konzultace',
+          price: '0',
+          period: '20 minut',
+          items: [
+            { description: 'Navázání kontaktu on-line' },
+            { description: 'Nastínění záměru a témat' },
+            { description: 'Pomoc s výběrem následné služby' },
+          ],
+        },
+        {
+          title: 'Konzultace',
+          price: '790',
+          period: '40 minut',
+          items: [
+            { description: 'Jednorázová konzultace' },
+            { description: 'On-line' },
+            { description: 'Možnost balíčku více konzultací za zvýhodněnou cenu dle individuální domluvy' },
+          ],
+        },
+        {
+          title: 'Konzultace',
+          price: '1190',
+          period: '70 minut',
+          items: [
+            { description: 'Jednorázová konzultace' },
+            { description: 'On-line nebo osobně dle domluvy' },
+            { description: 'Možnost balíčku více konzultací za zvýhodněnou cenu dle individuální domluvy' },
+          ],
+        },
+        {
+          title: 'Nutriční plán na míru',
+          price: '4490',
+          period: 'jednorázově od',
+          items: [
+            { description: 'Úvodní konzultace' },
+            { description: 'Individuální flexibilní stravovací plán' },
+            { description: 'Edukační materiály' },
+            { description: 'E-mailová podpora' },
+          ],
+        },
+        {
+          title: 'Optimalizace návyků',
+          price: '1590',
+          period: 'jednorázově',
+          items: [
+            { description: 'Analýza současného stavu (strava, pohyb, denní návyky)' },
+            { description: 'Doporučené ke změně, ukázkový jídelníček' },
+            { description: 'Výstupní konzultace' },
+            { description: 'Zodpovězení dotazů' },
+          ],
+        },
+        {
+          title: 'Suplementační plán',
+          price: '1590',
+          period: 'jednorázově',
+          items: [
+            { description: 'Analýza stávající suplementace' },
+            { description: 'Návrh pro úpravu dle cíle/potíží' },
+            { description: 'Pomoc s výběrem kvalitních suplementů' },
+            { description: 'Konzultace a zodpovězení dotazů' },
+          ],
+        },
+        {
+          title: 'Komplexní koučink',
+          price: '5990',
+          period: 'za měsíc',
+          items: [
+            { description: 'Zpětná vazba (report) 1x týdně' },
+            { description: 'Vstupní konzultace' },
+            { description: 'Individuální plán stravy i návyků' },
+            { description: 'Bezpečný prostor pro sdílení, podpora' },
+          ],
+        },
+        {
+          title: 'Komplexní koučink',
+          price: '4990',
+          period: 'za měsíc',
+          items: [
+            { description: 'Zpětná vazba (report) 2x měsíčně' },
+            { description: 'Vstupní konzultace' },
+            { description: 'Individuální plán stravy i návyků' },
+            { description: 'Bezpečný prostor pro sdílení, podpora' },
+          ],
+        },
+        {
+          title: 'Podpůrný koučink',
+          price: '3990',
+          period: 'za měsíc',
+          items: [
+            { description: 'Zpětná vazba (report) 1x týdně' },
+            { description: 'Doporučení pro nastavení příjmu energie' },
+            { description: 'Optimalizace denních návyků' },
+            { description: 'Bezpečný prostor pro sdílení, podpora' },
+          ],
+        },
+        {
+          title: 'Podpůrný koučink',
+          price: '2990',
+          period: 'za měsíc',
+          items: [
+            { description: 'Zpětná vazba (report) 2x měsíčně' },
+            { description: 'Doporučení pro nastavení příjmu energie' },
+            { description: 'Optimalizace denních návyků' },
+            { description: 'Bezpečný prostor pro sdílení, podpora' },
+          ],
+        },
+      ]
+    }
   />
 
   <!-- CallToAction Widget *********** -->
