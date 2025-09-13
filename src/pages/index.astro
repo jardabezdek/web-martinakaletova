@@ -7,6 +7,7 @@ import Content from '~/components/widgets/Content.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import { getPermalink } from '~/utils/permalinks';
 
@@ -37,6 +38,7 @@ const metadata = {
             { text: 'Ceník', href: getPermalink('/pricing') },
           ]
         },
+        { text: 'Spolupráce', href: getPermalink('/#steps') },
         { text: 'Můj klient', href: getPermalink('/#client') },
         { text: 'Kontakt', href: getPermalink('/#contact') },
       ]}
@@ -192,6 +194,44 @@ const metadata = {
     <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
     </Fragment>
   </Features2>
+
+  <!-- Steps ****************** -->
+
+  <Steps
+    id="steps"
+    title="Jak spolupráce se mnou probíhá"
+    items={[
+      {
+        title: 'Kontaktujte mě',
+        description: 'Zpráva na Instagram může stačit, do e-mailu se klidně rozepište!',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Domluvíme termín',
+        description: 'Obratem se s vámi spojím a domluvíme termín konzultace nebo zahájení spolupráce. Můžeme se potkat na úvodní konzultaci zdarma :). Po potvrzení objednávky dostanete fakturu, kterou uhradíte.',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Vyplníte dotazník',
+        description: 'Zašlu vám podklady pro vyplnění, abychom měli co nejvíce informací hned od startu.',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Vaše cesta začíná',
+        description: 'Zahájíme spolupráci a nastavíme první akční kroky přesně tak, jak v aktuální chvíli potřebujete. Můžete začít vzkvétat.',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: 'Zůstaneme ve spojení',
+        description: 'Ať už pravidelně v rámci spolupráce nebo jako podpora na dálku, vždy mě zajímá, jak se vám daří v praxi!',
+        icon: 'tabler:number-5',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/steps.png',
+      alt: 'Steps',
+    }}
+  />
 
   <!-- Who am I for? ****************** -->
 
