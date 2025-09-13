@@ -4,6 +4,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
@@ -223,6 +224,43 @@ const metadata = {
         title: 'Hledáte někoho, kdo vás provede a\u00A0podpoří na&nbsp;cestě ke&nbsp;změně?',
         icon: 'tabler:quote',
       }
+    ]}
+  />
+
+  <!-- Testimonials *********** -->
+
+  <Testimonials
+    id="testimonials"
+    title="Recenze klientů"
+    subtitle=""
+    testimonials={[
+      {
+        testimonial: `Martinka je duše, kterou chcete na své cestě potkat. Empatie, informovanost, proaktivní přístup, bezpečný prostor, pokora, pochopení, nesouzení. Všechno tohle, a ještě víc, je právě Martinka. Pozadí vystudované farmacie a vhled za oponu farmaceutického průmyslu v kombinaci s holistickým přístupem, touhou po opravdovém zdraví a reálným věděním průběhu nejen tělesných procesů, je přesně TO, co je v dnešní době rychlokvašných mudrců, rádců a pseudokoučů, vzácné. Martinku doporučuji z celého svého srdce. Už po úvodní konzultaci s lehkou úpravou suplementace, se děly divy. A i když mi musí Martinka některé informace opakovat 4x, vždy je to s pokorou a velkou mírou empatie, bez jediné poznámky na četnost opakování nebo, že by Vám to už několikrát říkala. Jestli váháte, komu se na své cestě svěřit, Martinka je ta správná volba`,
+        name: 'Adéla N.',
+        image: {
+          src: '~/assets/images/testimonials_adela_n.jpeg',
+          alt: 'Adéla N.',
+        },
+      },
+      {
+        testimonial: `Marti moc děkuji za čas, který mi věnovala, a za to, že nasměrovala mé stravovaní správným směrem. Jsem moc ráda, že jsem ji oslovila. Společně jsme našly mé slabiny, na kterých se postupně snažím pracovat a Marťa na mě dohlíží ostřížím zrakem nadále i po uskutečněné konzultaci. Ukázala mi, že spoustu kupovaných polotovarů se dá nahradit domácí výrobou a ani to nezabere moc času. Spolupráce pro mě dopadla na jedničku a Marťu můžu bez váhání doporučit komukoli (nejen) v mém okolí, kdo by radu ohledně stravování potřeboval.`,
+        name: 'Michaela K.',
+        image: {
+          src: '~/assets/images/testimonials_michaela_k.jpg',
+          alt: 'Michaela K.',
+        },
+      },
+      {
+        testimonial: `S Marťou spolupracujeme už 19 mesiacov. Oslovila som ju v období, keď som chcela podstúpiť zmenu v stravovaní a nevedela som, ako to správne uchopiť. Prešli sme spolu od vyváženej skladby jedálnička, budovania návykov až po redukciu hmotnosti.<br /><br />
+Musím skonštatovať, že zvoliť si Marťu ako sprievodkyňu na tejto ceste bolo moje najlepšie rozhodnutie. Je veľmi empatická, podporujúca a aj v obdobiach, keď som mala pocit, že sa mi nič nedarí, ma dokázala povzbudiť a poukázať na pozitíva na mojej ceste.<br /><br />
+Mojím cieľom bolo naučiť sa stravovať tak, aby moje telo dostávalo všetky dôležité živiny, aby som sa cítila dobre a bola zdravá – a v neposlednom rade aj úbytok hmotnosti. S Marťou sa mi všetky ciele podarilo naplniť a stále spoločne pracujeme na udržaní dobrých návykov a aj na redukcii hmotnosti, ktorá je udržateľná. Okrem toho mi pomohla zapracovať na lepšej kvalite spánku, na dodržiavaní pravidelného pitného režimu a vďaka nej som si vytvorila menšie rutiny počas dňa, ktoré mi pomáhajú aj v ťažších chvíľach života.<br /><br />
+Som za Marťu veľmi vďačná každý jeden deň. :)`,
+        name: 'Vlasta H.',
+        image: {
+          src: '~/assets/images/testimonials_vlasta_h.jpg',
+          alt: 'Vlast H.',
+        },
+      },
     ]}
   />
 
